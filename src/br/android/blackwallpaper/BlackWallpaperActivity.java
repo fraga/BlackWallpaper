@@ -25,14 +25,14 @@ public class BlackWallpaperActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		//we don't need to reload the saved instance
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.main);
+		//£¢setContentView(R.layout.main);
 
 		AlertDialog alert = new AlertDialog.Builder(this).create();
 
 		alert.setTitle(R.string.app_name);
-		alert.setMessage("This will change your current background to pure black background. Are You sure?");
+		alert.setMessage("This will change your current background to pure black background. Are you sure?");
 		
-		alert.setButton2("Cancel", new DialogInterface.OnClickListener() {
+		alert.setButton2("No", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				//createNotification("There was a problem setting your wallpaper.");
@@ -42,7 +42,7 @@ public class BlackWallpaperActivity extends Activity {
 			}
 		});
 		
-		alert.setButton("OK", new DialogInterface.OnClickListener() {
+		alert.setButton("Yes", new DialogInterface.OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
