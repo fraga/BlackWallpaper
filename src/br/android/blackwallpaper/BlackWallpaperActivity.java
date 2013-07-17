@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Debug;
+import android.service.wallpaper.WallpaperService;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
@@ -67,7 +68,7 @@ public class BlackWallpaperActivity extends Activity {
 	}
 
 	public void changeBackground() throws IOException {
-		WallpaperManager wm = (WallpaperManager) getSystemService(WALLPAPER_SERVICE);
+		WallpaperService wm = (WallpaperService) getSystemService(WALLPAPER_SERVICE);
 
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -75,7 +76,7 @@ public class BlackWallpaperActivity extends Activity {
 		Bitmap backBitmap = Bitmap.createBitmap(metrics.widthPixels,
 				metrics.heightPixels, Bitmap.Config.ARGB_4444);
 		// test
-		wm.setBitmap(backBitmap);
+		wm.setWallpaper(backBitmap);
 	}
 
 	public void createNotification(String message) {
