@@ -40,10 +40,13 @@ public class BlackWallpaperActivity extends Activity {
 					changeBackground();
 					
 					Toast.makeText(getApplicationContext(), "Your background was set", Toast.LENGTH_LONG).show();
-					finish();
 
 				} catch (Exception e) {
 					Toast.makeText(getApplicationContext(), "There was a problem while setting your background", Toast.LENGTH_LONG).show();
+				}
+				finally
+				{
+					finish();
 				}
 
 			}
