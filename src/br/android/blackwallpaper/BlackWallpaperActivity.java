@@ -17,7 +17,6 @@ public class BlackWallpaperActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		//we don't need to reload the saved instance
 		super.onCreate(savedInstanceState);
-		//£¢setContentView(R.layout.main);
 
 		AlertDialog alert = new AlertDialog.Builder(this).create();
 
