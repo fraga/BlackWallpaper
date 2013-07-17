@@ -4,10 +4,10 @@ import java.io.IOException;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.WallpaperManager;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.service.wallpaper.WallpaperService;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
 
@@ -55,14 +55,12 @@ public class BlackWallpaperActivity extends Activity {
 	}
 
 	public void changeBackground() throws IOException {
-		WallpaperService wm = (WallpaperService) getSystemService(WALLPAPER_SERVICE);
-
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
 		Bitmap backBitmap = Bitmap.createBitmap(metrics.widthPixels,
 				metrics.heightPixels, Bitmap.Config.ARGB_4444);
-		wm.setWallpaper(backBitmap);
+		WallpaperManager.getInstance(getApplicationContext()).setBitmap(backBitmap);
 	}
 
 
