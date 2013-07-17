@@ -22,8 +22,7 @@ public class BlackWallpaperActivity extends Activity {
 
 		alert.setTitle(R.string.app_name);
 		alert.setMessage("This will change your current background to pure black background. Are you sure?");
-		
-		alert.setButton(1, "No", new DialogInterface.OnClickListener() {
+		alert.setButton(AlertDialog.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				//createNotification("There was a problem setting your wallpaper.");
@@ -33,7 +32,7 @@ public class BlackWallpaperActivity extends Activity {
 			}
 		});
 		
-		alert.setButton(2, "Yes", new DialogInterface.OnClickListener() {
+		alert.setButton(AlertDialog.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
