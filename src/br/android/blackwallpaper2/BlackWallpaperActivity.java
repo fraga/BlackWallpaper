@@ -1,4 +1,4 @@
-package br.android.blackwallpaper;
+package br.android.blackwallpaper2;
 
 import java.io.IOException;
 
@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
+import br.android.blackwallpaper2.R;
 
 public class BlackWallpaperActivity extends Activity {
 	/** Called when the activity is first created. */

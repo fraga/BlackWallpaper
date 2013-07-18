@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">Hello World, BlackWallpaperActivity!</string>
-    <string name="app_name">Black Wallpaper</string>
+    <string name="app_name">Black Wallpaper 2</string>
 <string name="OK_STRING">OK</string>
 <string name="CANCEL_STRING">Cancel</string>
 <string name="DIALOG_STRING_MESSAGE">This will change your current background settings. Do you wish to change?</string>
